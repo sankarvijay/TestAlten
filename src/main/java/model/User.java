@@ -1,10 +1,16 @@
-package userJava;
+package model;
 public class User {
 
     private String active;
     private String canal;
 
-    public User() {
+    public User(String canal, String active) {
+        this.canal=canal;
+        this.active=active;
+
+    }
+
+    public User(){
 
     }
 

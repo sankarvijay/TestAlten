@@ -1,12 +1,11 @@
 package hellocucumber;
 import cucumber.api.CucumberOptions;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import cucumber.api.junit.Cucumber;
 import org.junit.runner.RunWith;
-import userJava.User;
+import model.User;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
@@ -23,7 +22,7 @@ public class MyStepdefs {
     private String active;
     private String canal;
 
-    User user = new User();
+    User user = new User("FACE", "inactive");
 
     @Given("^a subscriber with a main address \"([^\"]*)\" in France$")
     public void a_subscriber_with_a_main_address_in_France(String arg1) throws Exception {
